@@ -12,20 +12,17 @@
           rel="stylesheet">
 
     <link rel="stylesheet"
-          href="{{ url_for('static', filename='css/style.css') }}">
+      href="{{ url_for('static', filename='css/style.css') }}?v=99">
 
 </head>
 
 <body>
 
 <div class="container-fluid main-container">
-
     <div class="glass-card">
-
         <div class="header">
 
             <h1>🤖 AI Image Caption Generator</h1>
-
             <p>
                 Generate Intelligent Captions for Your Images using Deep Learning
             </p>
@@ -33,186 +30,128 @@
         </div>
 
         <div class="row g-4">
-
             <!-- Upload Section -->
-
             <div class="col-md-5">
-
                 <div class="card-box">
-
                     <h3>Upload Image</h3>
-
                     <form method="POST"
                           enctype="multipart/form-data">
-
                         <input
                             type="file"
                             name="image"
                             accept="image/*"
                             class="form-control mb-3"
                             required>
-
                         <button
                             type="submit"
                             class="btn btn-gradient w-100">
-
                             Generate Caption
-
                         </button>
 
                     </form>
 
                     {% if image_path %}
-
                     <h5 class="mt-4">Uploaded Image</h5>
-
                     <img
                         src="{{ image_path }}"
                         class="img-fluid preview-img">
-
                     {% endif %}
-
                 </div>
-
             </div>
 
             <!-- Caption Section -->
-
             <div class="col-md-7">
-
                 <div class="card-box">
-
                     <h3>Generated Caption</h3>
-
                     {% if caption %}
-
-                    <div
-                        class="caption-box"
-                        id="captionText">
+                    <div class="caption-box" id="captionText">
 
                         {{ caption }}
 
                     </div>
-
                     {% else %}
 
                     <div class="caption-box">
-
                         Upload an image to generate a caption.
-
                     </div>
 
                     {% endif %}
-
                     <!-- Confidence -->
-
                     {% if caption %}
-
                     <div class="mt-4">
-
                         <label class="mb-2">
                             Confidence Score
                         </label>
-
                         <div class="progress">
 
-                            <div
-                                class="progress-bar"
-                                role="progressbar"
-                                style="width:92%;">
+                            <div class="progress-bar" role="progressbar" style="width:92%;">
 
                                 92%
 
                             </div>
-
                         </div>
-
                     </div>
 
                     {% endif %}
 
                     <!-- Audio -->
-
                     {% if audio_path %}
-
                     <h4 class="mt-4">
                         🔊 Listen Caption
                     </h4>
 
                     <audio controls class="w-100">
 
-                        <source
-                            src="{{ audio_path }}"
-                            type="audio/mpeg">
+                        <source src="{{ audio_path }}" type="audio/mpeg">
 
                     </audio>
 
                     {% endif %}
 
                     <!-- Buttons -->
-
                     {% if caption %}
 
                     <div class="row mt-4">
-
                         <div class="col">
-
-                            <button
-                                class="btn btn-gradient w-100"
-                                onclick="copyCaption()">
+                            <button class="btn btn-gradient w-100" onclick="copyCaption()">
 
                                 Copy Caption
 
                             </button>
-
                         </div>
-
                         <div class="col">
 
-                            <a href="/download"
-                               class="btn btn-outline-light w-100">
+                            <a href="/download" class="btn btn-outline-light w-100">
 
                                 Download Caption
 
                             </a>
-
                         </div>
-
                     </div>
 
                     {% endif %}
 
                 </div>
-
             </div>
-
         </div>
 
         <!-- Information Section -->
 
         <div class="row mt-4 g-4">
-
             <div class="col-md-4">
-
                 <div class="info-box">
-
                     <h4>Model Information</h4>
-
                     <ul>
                         <li>CNN: VGG16</li>
                         <li>Decoder: LSTM</li>
                         <li>Dataset: Flickr8k</li>
                         <li>Framework: TensorFlow</li>
                     </ul>
-
                 </div>
-
             </div>
 
             <div class="col-md-4">
-
                 <div class="info-box">
-
                     <h4>Features</h4>
 
                     <ul>
@@ -223,11 +162,9 @@
                     </ul>
 
                 </div>
-
             </div>
 
             <div class="col-md-4">
-
                 <div class="info-box">
 
                     <h4>How It Works</h4>
@@ -242,7 +179,6 @@
                     </p>
 
                 </div>
-
             </div>
 
         </div>
@@ -252,7 +188,7 @@
             <hr>
 
             <p>
-                © 2026 Milan Arote | AI Image Caption Generator
+                © AI Image Caption Generator
             </p>
 
         </footer>
