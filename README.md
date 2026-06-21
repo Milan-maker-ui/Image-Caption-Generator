@@ -23,10 +23,18 @@ python app.py,
 Running on http://127.0.0.1:5000,
 Running on http://10.38.8.44:5000.
 
-🚀 How It Works
+🚀 How It Works:
 User uploads an image,
 VGG16 extracts image features,
 The trained LSTM model predicts a caption,
 Caption is displayed on the webpage,
 gTTS converts the caption into audio,
 User can listen to or download the caption.
+
+🔮 Future Improvements: 
+Transformer-based caption generation,
+Real-time webcam captioning,
+Multiple language support,
+User authentication system,
+Caption confidence score prediction,
+Cloud deployment (AWS, Render, Hugging Face).
