@@ -52,19 +52,6 @@ Technologies Used
 
 ---
 
-Installation
-
-Clone the repository:
-
-git clone https://github.com/yourusername/Image-Caption-Generator.git
-cd Image-Caption-Generator
-
-Install dependencies:
-
-pip install -r requirements.txt
-
----
-
 Model Architecture
 
 1. Load and preprocess captions.
