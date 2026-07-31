@@ -24,17 +24,6 @@ Dataset
 - Images: 8,000
 - Captions: 40,000 (5 captions per image)
 
-Directory structure:
-
-dataset/
-│
-├── Images/
-│   ├── 1000268201_693b08cb0e.jpg
-│   ├── 1001773457_577c3a7d70.jpg
-│   └── ...
-│
-└── captions.txt
-
 ---
 
 Technologies Used
