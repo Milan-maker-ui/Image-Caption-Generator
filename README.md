@@ -51,22 +51,6 @@ Model Architecture
 
 ---
 
-Training
-
-Run:
-
-python train.py
-
-The trained model, tokenizer, and extracted image features will be saved in the "models/" directory.
-
----
-
-Prediction
-
-Run:
-
-python predict.py
-
 Example output:
 
 Input Image:
