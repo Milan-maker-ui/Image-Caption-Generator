@@ -1,5 +1,4 @@
 from flask import Flask, render_template, request, url_for, send_file
-
 from gtts import gTTS
 from werkzeug.utils import secure_filename
 import os
@@ -15,7 +14,6 @@ if os.path.exists("templates"):
 from predict import generate_caption
 
 app = Flask(__name__)
-
 UPLOAD_FOLDER = "static/uploads"
 AUDIO_FOLDER = "static/audio"
 
@@ -29,14 +27,12 @@ latest_caption = ""
 
 @app.route("/", methods=["GET", "POST"])
 def index():
-
     global latest_caption
     caption = None
     image_url = None
     audio_url = None
 
     if request.method == "POST":
-
         if "image" not in request.files:
             return render_template("index.html")
         
@@ -68,7 +64,6 @@ def index():
                 print("TTS Error:", e)
 
     return render_template("index.html", caption=caption, image_path=image_url, audio_path=audio_url)
-
 
 @app.route("/download")
 def download_caption():
